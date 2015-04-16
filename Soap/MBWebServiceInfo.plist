@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>secureConnect</key>
+	<false/>
+	<key>connectDomain</key>
+	<string>login.salesforce.com</string>
+	<key>rootServiceURL</key>
+	<string>https://login.salesforce.com/services/Soap/u/33.0</string>
+	<key>responseGZipMode</key>
+	<true/>
+	<key>userName</key>
+	<string></string>
+	<key>password</key>
+	<string></string>
+</dict>
+</plist>

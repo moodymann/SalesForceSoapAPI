@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBAA25481ACD2CF7009C63DA /* WorkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */; };
+		EBAA254B1ACD2D33009C63DA /* WorkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */; };
+		EBC35BB61AB00D3300834BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC35BB51AB00D3300834BAB /* Cocoa.framework */; };
+		EBC35BC01AB00D3400834BAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BBE1AB00D3400834BAB /* InfoPlist.strings */; };
+		EBC35BC21AB00D3400834BAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BC11AB00D3400834BAB /* main.m */; };
+		EBC35BC61AB00D3400834BAB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BC41AB00D3400834BAB /* Credits.rtf */; };
+		EBC35BC91AB00D3400834BAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BC81AB00D3400834BAB /* AppDelegate.m */; };
+		EBC35BCC1AB00D3400834BAB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BCA1AB00D3400834BAB /* MainMenu.xib */; };
+		EBC35BCE1AB00D3400834BAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BCD1AB00D3400834BAB /* Images.xcassets */; };
+		EBC35BD51AB00D3400834BAB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC35BD41AB00D3400834BAB /* XCTest.framework */; };
+		EBC35BD61AB00D3400834BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC35BB51AB00D3300834BAB /* Cocoa.framework */; };
+		EBC35BDE1AB00D3400834BAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BDC1AB00D3400834BAB /* InfoPlist.strings */; };
+		EBC35BE01AB00D3400834BAB /* SoapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BDF1AB00D3400834BAB /* SoapTests.m */; };
+		EBC35BEA1AB00D9F00834BAB /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC35BE91AB00D9F00834BAB /* libxml2.dylib */; };
+		EBC35BF11AB00FE100834BAB /* WebServiceStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BF01AB00FE100834BAB /* WebServiceStubs.m */; };
+		EBC35BF31AB179F000834BAB /* MBWebServiceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBC35BF21AB179F000834BAB /* MBWebServiceInfo.plist */; };
+		EBC35BF61AB17A5000834BAB /* MBWebServiceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BF51AB17A5000834BAB /* MBWebServiceInfo.m */; };
+		EBC35BFA1AB279FB00834BAB /* LoginServiceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35BF91AB279FB00834BAB /* LoginServiceStub.m */; };
+		EBC35C011AB27AB000834BAB /* LoginParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C001AB27AB000834BAB /* LoginParameter.m */; };
+		EBC35C041AB27B0600834BAB /* WebServiceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C031AB27B0600834BAB /* WebServiceUtil.m */; };
+		EBC35C081AB27C1C00834BAB /* LoginLibxmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C071AB27C1C00834BAB /* LoginLibxmlParser.m */; };
+		EBC35C0C1AB27C6900834BAB /* WebServiceLibxmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C0B1AB27C6900834BAB /* WebServiceLibxmlParser.m */; };
+		EBC35C111AB27CD300834BAB /* WebServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C101AB27CD300834BAB /* WebServiceResult.m */; };
+		EBC35C141AB27E2E00834BAB /* LoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C131AB27E2E00834BAB /* LoginResult.m */; };
+		EBC35C181AB27FC800834BAB /* BaseMasterVO.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C171AB27FC800834BAB /* BaseMasterVO.m */; };
+		EBC35C1B1AB285B200834BAB /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C1A1AB285B200834BAB /* UserVO.m */; };
+		EBC35C1E1AB2886500834BAB /* InquiryService.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C1D1AB2886500834BAB /* InquiryService.m */; };
+		EBC35C211AB6B18100834BAB /* DescribeSObjectParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C201AB6B18100834BAB /* DescribeSObjectParameter.m */; };
+		EBC35C241AB6B98700834BAB /* DescribeSObjectLibxmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C231AB6B98700834BAB /* DescribeSObjectLibxmlParser.m */; };
+		EBC35C271AB6B99B00834BAB /* SObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C261AB6B99B00834BAB /* SObject.m */; };
+		EBC35C2A1AB6BDF300834BAB /* SObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C291AB6BDF300834BAB /* SObjects.m */; };
+		EBC35C2D1AB6C2D900834BAB /* DescribeSObjectsSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C2C1AB6C2D900834BAB /* DescribeSObjectsSearchResult.m */; };
+		EBC35C301AB6C64C00834BAB /* DescribeSObjectsServiceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC35C2F1AB6C64C00834BAB /* DescribeSObjectsServiceStub.m */; };
+		EBC9FCCF1AD24A940081FE42 /* QueryServiceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCCE1AD24A940081FE42 /* QueryServiceStub.m */; };
+		EBC9FCD21AD24AC50081FE42 /* QueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCD11AD24AC50081FE42 /* QueryResult.m */; };
+		EBC9FCD51AD24AF10081FE42 /* QueryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCD41AD24AF10081FE42 /* QueryParser.m */; };
+		EBC9FCD81AD24B120081FE42 /* QueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCD71AD24B120081FE42 /* QueryParameter.m */; };
+		EBC9FCDB1AD27A5C0081FE42 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCDA1AD27A5C0081FE42 /* Query.m */; };
+		EBC9FCDE1ADB59ED0081FE42 /* DescribeGlobalParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCDD1ADB59ED0081FE42 /* DescribeGlobalParameter.m */; };
+		EBC9FCE11ADB5A500081FE42 /* DescribeGlobalResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCE01ADB5A500081FE42 /* DescribeGlobalResult.m */; };
+		EBC9FCE51ADB5D9C0081FE42 /* DescribeGlobalStub.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCE41ADB5D9C0081FE42 /* DescribeGlobalStub.m */; };
+		EBC9FCE81ADB5DE90081FE42 /* DescribrGlobalParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC9FCE71ADB5DE90081FE42 /* DescribrGlobalParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBC35BD71AB00D3400834BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBC35BAA1AB00D3300834BAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC35BB11AB00D3300834BAB;
+			remoteInfo = Soap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkWindow.xib; sourceTree = "<group>"; };
+		EBAA25491ACD2D33009C63DA /* WorkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkWindowController.h; sourceTree = "<group>"; };
+		EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkWindowController.m; sourceTree = "<group>"; };
+		EBC35BB21AB00D3300834BAB /* Soap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC35BB51AB00D3300834BAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EBC35BB81AB00D3300834BAB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EBC35BB91AB00D3300834BAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EBC35BBA1AB00D3300834BAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBC35BBD1AB00D3400834BAB /* Soap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Soap-Info.plist"; sourceTree = "<group>"; };
+		EBC35BBF1AB00D3400834BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC35BC11AB00D3400834BAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBC35BC31AB00D3400834BAB /* Soap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Soap-Prefix.pch"; sourceTree = "<group>"; };
+		EBC35BC51AB00D3400834BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		EBC35BC71AB00D3400834BAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBC35BC81AB00D3400834BAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBC35BCB1AB00D3400834BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EBC35BCD1AB00D3400834BAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBC35BD31AB00D3400834BAB /* SoapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC35BD41AB00D3400834BAB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EBC35BDB1AB00D3400834BAB /* SoapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoapTests-Info.plist"; sourceTree = "<group>"; };
+		EBC35BDD1AB00D3400834BAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC35BDF1AB00D3400834BAB /* SoapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoapTests.m; sourceTree = "<group>"; };
+		EBC35BE91AB00D9F00834BAB /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EBC35BEF1AB00FE100834BAB /* WebServiceStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebServiceStubs.h; path = WebService/WebServiceStubs.h; sourceTree = "<group>"; };
+		EBC35BF01AB00FE100834BAB /* WebServiceStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebServiceStubs.m; path = WebService/WebServiceStubs.m; sourceTree = "<group>"; };
+		EBC35BF21AB179F000834BAB /* MBWebServiceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MBWebServiceInfo.plist; sourceTree = "<group>"; };
+		EBC35BF41AB17A5000834BAB /* MBWebServiceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBWebServiceInfo.h; sourceTree = "<group>"; };
+		EBC35BF51AB17A5000834BAB /* MBWebServiceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBWebServiceInfo.m; sourceTree = "<group>"; };
+		EBC35BF81AB279FB00834BAB /* LoginServiceStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginServiceStub.h; path = WebService/Stubs/LoginServiceStub.h; sourceTree = "<group>"; };
+		EBC35BF91AB279FB00834BAB /* LoginServiceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginServiceStub.m; path = WebService/Stubs/LoginServiceStub.m; sourceTree = "<group>"; };
+		EBC35BFF1AB27AB000834BAB /* LoginParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginParameter.h; path = WebService/Parameter/LoginParameter.h; sourceTree = "<group>"; };
+		EBC35C001AB27AB000834BAB /* LoginParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginParameter.m; path = WebService/Parameter/LoginParameter.m; sourceTree = "<group>"; };
+		EBC35C021AB27B0600834BAB /* WebServiceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebServiceUtil.h; path = WebService/WebServiceUtil.h; sourceTree = "<group>"; };
+		EBC35C031AB27B0600834BAB /* WebServiceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebServiceUtil.m; path = WebService/WebServiceUtil.m; sourceTree = "<group>"; };
+		EBC35C061AB27C1C00834BAB /* LoginLibxmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginLibxmlParser.h; path = WebService/Parser/LoginLibxmlParser.h; sourceTree = "<group>"; };
+		EBC35C071AB27C1C00834BAB /* LoginLibxmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginLibxmlParser.m; path = WebService/Parser/LoginLibxmlParser.m; sourceTree = "<group>"; };
+		EBC35C0A1AB27C6900834BAB /* WebServiceLibxmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebServiceLibxmlParser.h; path = WebService/Parser/Base/WebServiceLibxmlParser.h; sourceTree = "<group>"; };
+		EBC35C0B1AB27C6900834BAB /* WebServiceLibxmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebServiceLibxmlParser.m; path = WebService/Parser/Base/WebServiceLibxmlParser.m; sourceTree = "<group>"; };
+		EBC35C0F1AB27CD300834BAB /* WebServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebServiceResult.h; path = WebService/Result/Base/WebServiceResult.h; sourceTree = "<group>"; };
+		EBC35C101AB27CD300834BAB /* WebServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebServiceResult.m; path = WebService/Result/Base/WebServiceResult.m; sourceTree = "<group>"; };
+		EBC35C121AB27E2E00834BAB /* LoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginResult.h; path = WebService/Result/LoginResult.h; sourceTree = "<group>"; };
+		EBC35C131AB27E2E00834BAB /* LoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginResult.m; path = WebService/Result/LoginResult.m; sourceTree = "<group>"; };
+		EBC35C161AB27FC800834BAB /* BaseMasterVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseMasterVO.h; path = Struct/BaseMasterVO.h; sourceTree = "<group>"; };
+		EBC35C171AB27FC800834BAB /* BaseMasterVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseMasterVO.m; path = Struct/BaseMasterVO.m; sourceTree = "<group>"; };
+		EBC35C191AB285B200834BAB /* UserVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserVO.h; path = Struct/UserVO.h; sourceTree = "<group>"; };
+		EBC35C1A1AB285B200834BAB /* UserVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserVO.m; path = Struct/UserVO.m; sourceTree = "<group>"; };
+		EBC35C1C1AB2886500834BAB /* InquiryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InquiryService.h; sourceTree = "<group>"; };
+		EBC35C1D1AB2886500834BAB /* InquiryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InquiryService.m; sourceTree = "<group>"; };
+		EBC35C1F1AB6B18100834BAB /* DescribeSObjectParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeSObjectParameter.h; path = WebService/Parameter/DescribeSObjectParameter.h; sourceTree = "<group>"; };
+		EBC35C201AB6B18100834BAB /* DescribeSObjectParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeSObjectParameter.m; path = WebService/Parameter/DescribeSObjectParameter.m; sourceTree = "<group>"; };
+		EBC35C221AB6B98700834BAB /* DescribeSObjectLibxmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeSObjectLibxmlParser.h; path = WebService/Parser/DescribeSObjectLibxmlParser.h; sourceTree = "<group>"; };
+		EBC35C231AB6B98700834BAB /* DescribeSObjectLibxmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeSObjectLibxmlParser.m; path = WebService/Parser/DescribeSObjectLibxmlParser.m; sourceTree = "<group>"; };
+		EBC35C251AB6B99B00834BAB /* SObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SObject.h; path = Struct/SObject.h; sourceTree = "<group>"; };
+		EBC35C261AB6B99B00834BAB /* SObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SObject.m; path = Struct/SObject.m; sourceTree = "<group>"; };
+		EBC35C281AB6BDF300834BAB /* SObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SObjects.h; path = Struct/SObjects.h; sourceTree = "<group>"; };
+		EBC35C291AB6BDF300834BAB /* SObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SObjects.m; path = Struct/SObjects.m; sourceTree = "<group>"; };
+		EBC35C2B1AB6C2D900834BAB /* DescribeSObjectsSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeSObjectsSearchResult.h; path = WebService/Result/DescribeSObjectsSearchResult.h; sourceTree = "<group>"; };
+		EBC35C2C1AB6C2D900834BAB /* DescribeSObjectsSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeSObjectsSearchResult.m; path = WebService/Result/DescribeSObjectsSearchResult.m; sourceTree = "<group>"; };
+		EBC35C2E1AB6C64C00834BAB /* DescribeSObjectsServiceStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeSObjectsServiceStub.h; path = WebService/Stubs/DescribeSObjectsServiceStub.h; sourceTree = "<group>"; };
+		EBC35C2F1AB6C64C00834BAB /* DescribeSObjectsServiceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeSObjectsServiceStub.m; path = WebService/Stubs/DescribeSObjectsServiceStub.m; sourceTree = "<group>"; };
+		EBC9FCCD1AD24A940081FE42 /* QueryServiceStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryServiceStub.h; sourceTree = "<group>"; };
+		EBC9FCCE1AD24A940081FE42 /* QueryServiceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryServiceStub.m; sourceTree = "<group>"; };
+		EBC9FCD01AD24AC50081FE42 /* QueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResult.h; sourceTree = "<group>"; };
+		EBC9FCD11AD24AC50081FE42 /* QueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResult.m; sourceTree = "<group>"; };
+		EBC9FCD31AD24AF10081FE42 /* QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParser.h; sourceTree = "<group>"; };
+		EBC9FCD41AD24AF10081FE42 /* QueryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryParser.m; sourceTree = "<group>"; };
+		EBC9FCD61AD24B120081FE42 /* QueryParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParameter.h; sourceTree = "<group>"; };
+		EBC9FCD71AD24B120081FE42 /* QueryParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryParameter.m; sourceTree = "<group>"; };
+		EBC9FCD91AD27A5C0081FE42 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		EBC9FCDA1AD27A5C0081FE42 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
+		EBC9FCDC1ADB59ED0081FE42 /* DescribeGlobalParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeGlobalParameter.h; path = WebService/Parameter/DescribeGlobalParameter.h; sourceTree = "<group>"; };
+		EBC9FCDD1ADB59ED0081FE42 /* DescribeGlobalParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeGlobalParameter.m; path = WebService/Parameter/DescribeGlobalParameter.m; sourceTree = "<group>"; };
+		EBC9FCDF1ADB5A500081FE42 /* DescribeGlobalResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeGlobalResult.h; path = WebService/Result/DescribeGlobalResult.h; sourceTree = "<group>"; };
+		EBC9FCE01ADB5A500081FE42 /* DescribeGlobalResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeGlobalResult.m; path = WebService/Result/DescribeGlobalResult.m; sourceTree = "<group>"; };
+		EBC9FCE31ADB5D9C0081FE42 /* DescribeGlobalStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribeGlobalStub.h; path = WebService/Stubs/DescribeGlobalStub.h; sourceTree = "<group>"; };
+		EBC9FCE41ADB5D9C0081FE42 /* DescribeGlobalStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribeGlobalStub.m; path = WebService/Stubs/DescribeGlobalStub.m; sourceTree = "<group>"; };
+		EBC9FCE61ADB5DE90081FE42 /* DescribrGlobalParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescribrGlobalParser.h; path = WebService/Parser/DescribrGlobalParser.h; sourceTree = "<group>"; };
+		EBC9FCE71ADB5DE90081FE42 /* DescribrGlobalParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescribrGlobalParser.m; path = WebService/Parser/DescribrGlobalParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBC35BAF1AB00D3300834BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC35BEA1AB00D9F00834BAB /* libxml2.dylib in Frameworks */,
+				EBC35BB61AB00D3300834BAB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC35BD01AB00D3400834BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC35BD61AB00D3400834BAB /* Cocoa.framework in Frameworks */,
+				EBC35BD51AB00D3400834BAB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBC35BA91AB00D3300834BAB = {
+			isa = PBXGroup;
+			children = (
+				EBC35BBB1AB00D3300834BAB /* Soap */,
+				EBC35BD91AB00D3400834BAB /* SoapTests */,
+				EBC35BB41AB00D3300834BAB /* Frameworks */,
+				EBC35BB31AB00D3300834BAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBC35BB31AB00D3300834BAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BB21AB00D3300834BAB /* Soap.app */,
+				EBC35BD31AB00D3400834BAB /* SoapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBC35BB41AB00D3300834BAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BE91AB00D9F00834BAB /* libxml2.dylib */,
+				EBC35BB51AB00D3300834BAB /* Cocoa.framework */,
+				EBC35BD41AB00D3400834BAB /* XCTest.framework */,
+				EBC35BB71AB00D3300834BAB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBC35BB71AB00D3300834BAB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BB81AB00D3300834BAB /* AppKit.framework */,
+				EBC35BB91AB00D3300834BAB /* CoreData.framework */,
+				EBC35BBA1AB00D3300834BAB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EBC35BBB1AB00D3300834BAB /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BC71AB00D3400834BAB /* AppDelegate.h */,
+				EBC35BC81AB00D3400834BAB /* AppDelegate.m */,
+				EBC35BF41AB17A5000834BAB /* MBWebServiceInfo.h */,
+				EBC35BF51AB17A5000834BAB /* MBWebServiceInfo.m */,
+				EBC35BCA1AB00D3400834BAB /* MainMenu.xib */,
+				EBC35BCD1AB00D3400834BAB /* Images.xcassets */,
+				EBC35C1C1AB2886500834BAB /* InquiryService.h */,
+				EBC35C1D1AB2886500834BAB /* InquiryService.m */,
+				EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */,
+				EBAA25491ACD2D33009C63DA /* WorkWindowController.h */,
+				EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */,
+				EBC35BEE1AB00FAA00834BAB /* WebService */,
+				EBC35C151AB27F9B00834BAB /* Struct */,
+				EBC35BBC1AB00D3400834BAB /* Supporting Files */,
+			);
+			path = Soap;
+			sourceTree = "<group>";
+		};
+		EBC35BBC1AB00D3400834BAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BBD1AB00D3400834BAB /* Soap-Info.plist */,
+				EBC35BBE1AB00D3400834BAB /* InfoPlist.strings */,
+				EBC35BC11AB00D3400834BAB /* main.m */,
+				EBC35BC31AB00D3400834BAB /* Soap-Prefix.pch */,
+				EBC35BC41AB00D3400834BAB /* Credits.rtf */,
+				EBC35BF21AB179F000834BAB /* MBWebServiceInfo.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBC35BD91AB00D3400834BAB /* SoapTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BDF1AB00D3400834BAB /* SoapTests.m */,
+				EBC35BDA1AB00D3400834BAB /* Supporting Files */,
+			);
+			path = SoapTests;
+			sourceTree = "<group>";
+		};
+		EBC35BDA1AB00D3400834BAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BDB1AB00D3400834BAB /* SoapTests-Info.plist */,
+				EBC35BDC1AB00D3400834BAB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBC35BEE1AB00FAA00834BAB /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BFB1AB27A2400834BAB /* Parameter */,
+				EBC35C051AB27BE900834BAB /* Parser */,
+				EBC35C0D1AB27CA100834BAB /* Result */,
+				EBC35BF71AB279D500834BAB /* Stubs */,
+				EBC35C021AB27B0600834BAB /* WebServiceUtil.h */,
+				EBC35C031AB27B0600834BAB /* WebServiceUtil.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		EBC35BF71AB279D500834BAB /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C311AB81ADE00834BAB /* Base */,
+				EBC35BF81AB279FB00834BAB /* LoginServiceStub.h */,
+				EBC35BF91AB279FB00834BAB /* LoginServiceStub.m */,
+				EBC35C2E1AB6C64C00834BAB /* DescribeSObjectsServiceStub.h */,
+				EBC35C2F1AB6C64C00834BAB /* DescribeSObjectsServiceStub.m */,
+				EBC9FCCD1AD24A940081FE42 /* QueryServiceStub.h */,
+				EBC9FCCE1AD24A940081FE42 /* QueryServiceStub.m */,
+				EBC9FCE31ADB5D9C0081FE42 /* DescribeGlobalStub.h */,
+				EBC9FCE41ADB5D9C0081FE42 /* DescribeGlobalStub.m */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
+		EBC35BFB1AB27A2400834BAB /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BFF1AB27AB000834BAB /* LoginParameter.h */,
+				EBC35C001AB27AB000834BAB /* LoginParameter.m */,
+				EBC35C1F1AB6B18100834BAB /* DescribeSObjectParameter.h */,
+				EBC35C201AB6B18100834BAB /* DescribeSObjectParameter.m */,
+				EBC9FCD61AD24B120081FE42 /* QueryParameter.h */,
+				EBC9FCD71AD24B120081FE42 /* QueryParameter.m */,
+				EBC9FCDC1ADB59ED0081FE42 /* DescribeGlobalParameter.h */,
+				EBC9FCDD1ADB59ED0081FE42 /* DescribeGlobalParameter.m */,
+			);
+			name = Parameter;
+			sourceTree = "<group>";
+		};
+		EBC35C051AB27BE900834BAB /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C091AB27C4900834BAB /* Base */,
+				EBC35C061AB27C1C00834BAB /* LoginLibxmlParser.h */,
+				EBC35C071AB27C1C00834BAB /* LoginLibxmlParser.m */,
+				EBC35C221AB6B98700834BAB /* DescribeSObjectLibxmlParser.h */,
+				EBC35C231AB6B98700834BAB /* DescribeSObjectLibxmlParser.m */,
+				EBC9FCD31AD24AF10081FE42 /* QueryParser.h */,
+				EBC9FCD41AD24AF10081FE42 /* QueryParser.m */,
+				EBC9FCE61ADB5DE90081FE42 /* DescribrGlobalParser.h */,
+				EBC9FCE71ADB5DE90081FE42 /* DescribrGlobalParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		EBC35C091AB27C4900834BAB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C0A1AB27C6900834BAB /* WebServiceLibxmlParser.h */,
+				EBC35C0B1AB27C6900834BAB /* WebServiceLibxmlParser.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		EBC35C0D1AB27CA100834BAB /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C0E1AB27CA900834BAB /* Base */,
+				EBC35C121AB27E2E00834BAB /* LoginResult.h */,
+				EBC35C131AB27E2E00834BAB /* LoginResult.m */,
+				EBC35C2B1AB6C2D900834BAB /* DescribeSObjectsSearchResult.h */,
+				EBC35C2C1AB6C2D900834BAB /* DescribeSObjectsSearchResult.m */,
+				EBC9FCD01AD24AC50081FE42 /* QueryResult.h */,
+				EBC9FCD11AD24AC50081FE42 /* QueryResult.m */,
+				EBC9FCDF1ADB5A500081FE42 /* DescribeGlobalResult.h */,
+				EBC9FCE01ADB5A500081FE42 /* DescribeGlobalResult.m */,
+			);
+			name = Result;
+			sourceTree = "<group>";
+		};
+		EBC35C0E1AB27CA900834BAB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C0F1AB27CD300834BAB /* WebServiceResult.h */,
+				EBC35C101AB27CD300834BAB /* WebServiceResult.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		EBC35C151AB27F9B00834BAB /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35C161AB27FC800834BAB /* BaseMasterVO.h */,
+				EBC35C171AB27FC800834BAB /* BaseMasterVO.m */,
+				EBC35C191AB285B200834BAB /* UserVO.h */,
+				EBC35C1A1AB285B200834BAB /* UserVO.m */,
+				EBC35C251AB6B99B00834BAB /* SObject.h */,
+				EBC35C261AB6B99B00834BAB /* SObject.m */,
+				EBC35C281AB6BDF300834BAB /* SObjects.h */,
+				EBC35C291AB6BDF300834BAB /* SObjects.m */,
+				EBC9FCD91AD27A5C0081FE42 /* Query.h */,
+				EBC9FCDA1AD27A5C0081FE42 /* Query.m */,
+			);
+			name = Struct;
+			sourceTree = "<group>";
+		};
+		EBC35C311AB81ADE00834BAB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBC35BEF1AB00FE100834BAB /* WebServiceStubs.h */,
+				EBC35BF01AB00FE100834BAB /* WebServiceStubs.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBC35BB11AB00D3300834BAB /* Soap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC35BE31AB00D3400834BAB /* Build configuration list for PBXNativeTarget "Soap" */;
+			buildPhases = (
+				EBC35BAE1AB00D3300834BAB /* Sources */,
+				EBC35BAF1AB00D3300834BAB /* Frameworks */,
+				EBC35BB01AB00D3300834BAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soap;
+			productName = Soap;
+			productReference = EBC35BB21AB00D3300834BAB /* Soap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBC35BD21AB00D3400834BAB /* SoapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC35BE61AB00D3400834BAB /* Build configuration list for PBXNativeTarget "SoapTests" */;
+			buildPhases = (
+				EBC35BCF1AB00D3400834BAB /* Sources */,
+				EBC35BD01AB00D3400834BAB /* Frameworks */,
+				EBC35BD11AB00D3400834BAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBC35BD81AB00D3400834BAB /* PBXTargetDependency */,
+			);
+			name = SoapTests;
+			productName = SoapTests;
+			productReference = EBC35BD31AB00D3400834BAB /* SoapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBC35BAA1AB00D3300834BAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					EBC35BD21AB00D3400834BAB = {
+						TestTargetID = EBC35BB11AB00D3300834BAB;
+					};
+				};
+			};
+			buildConfigurationList = EBC35BAD1AB00D3300834BAB /* Build configuration list for PBXProject "Soap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBC35BA91AB00D3300834BAB;
+			productRefGroup = EBC35BB31AB00D3300834BAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBC35BB11AB00D3300834BAB /* Soap */,
+				EBC35BD21AB00D3400834BAB /* SoapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBC35BB01AB00D3300834BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC35BC01AB00D3400834BAB /* InfoPlist.strings in Resources */,
+				EBC35BCE1AB00D3400834BAB /* Images.xcassets in Resources */,
+				EBAA25481ACD2CF7009C63DA /* WorkWindow.xib in Resources */,
+				EBC35BC61AB00D3400834BAB /* Credits.rtf in Resources */,
+				EBC35BF31AB179F000834BAB /* MBWebServiceInfo.plist in Resources */,
+				EBC35BCC1AB00D3400834BAB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC35BD11AB00D3400834BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC35BDE1AB00D3400834BAB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBC35BAE1AB00D3300834BAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC9FCDB1AD27A5C0081FE42 /* Query.m in Sources */,
+				EBC9FCE11ADB5A500081FE42 /* DescribeGlobalResult.m in Sources */,
+				EBC35C041AB27B0600834BAB /* WebServiceUtil.m in Sources */,
+				EBC35C2A1AB6BDF300834BAB /* SObjects.m in Sources */,
+				EBC35C211AB6B18100834BAB /* DescribeSObjectParameter.m in Sources */,
+				EBC35BF11AB00FE100834BAB /* WebServiceStubs.m in Sources */,
+				EBC9FCD81AD24B120081FE42 /* QueryParameter.m in Sources */,
+				EBC9FCE51ADB5D9C0081FE42 /* DescribeGlobalStub.m in Sources */,
+				EBC35C241AB6B98700834BAB /* DescribeSObjectLibxmlParser.m in Sources */,
+				EBC35C301AB6C64C00834BAB /* DescribeSObjectsServiceStub.m in Sources */,
+				EBC35BF61AB17A5000834BAB /* MBWebServiceInfo.m in Sources */,
+				EBC9FCD51AD24AF10081FE42 /* QueryParser.m in Sources */,
+				EBC35C081AB27C1C00834BAB /* LoginLibxmlParser.m in Sources */,
+				EBC35C271AB6B99B00834BAB /* SObject.m in Sources */,
+				EBC35C181AB27FC800834BAB /* BaseMasterVO.m in Sources */,
+				EBAA254B1ACD2D33009C63DA /* WorkWindowController.m in Sources */,
+				EBC35C141AB27E2E00834BAB /* LoginResult.m in Sources */,
+				EBC35BC91AB00D3400834BAB /* AppDelegate.m in Sources */,
+				EBC9FCD21AD24AC50081FE42 /* QueryResult.m in Sources */,
+				EBC35C1B1AB285B200834BAB /* UserVO.m in Sources */,
+				EBC35C011AB27AB000834BAB /* LoginParameter.m in Sources */,
+				EBC35BC21AB00D3400834BAB /* main.m in Sources */,
+				EBC35BFA1AB279FB00834BAB /* LoginServiceStub.m in Sources */,
+				EBC35C1E1AB2886500834BAB /* InquiryService.m in Sources */,
+				EBC9FCCF1AD24A940081FE42 /* QueryServiceStub.m in Sources */,
+				EBC9FCDE1ADB59ED0081FE42 /* DescribeGlobalParameter.m in Sources */,
+				EBC35C0C1AB27C6900834BAB /* WebServiceLibxmlParser.m in Sources */,
+				EBC9FCE81ADB5DE90081FE42 /* DescribrGlobalParser.m in Sources */,
+				EBC35C111AB27CD300834BAB /* WebServiceResult.m in Sources */,
+				EBC35C2D1AB6C2D900834BAB /* DescribeSObjectsSearchResult.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC35BCF1AB00D3400834BAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC35BE01AB00D3400834BAB /* SoapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBC35BD81AB00D3400834BAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBC35BB11AB00D3300834BAB /* Soap */;
+			targetProxy = EBC35BD71AB00D3400834BAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBC35BBE1AB00D3400834BAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC35BBF1AB00D3400834BAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EBC35BC41AB00D3400834BAB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC35BC51AB00D3400834BAB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		EBC35BCA1AB00D3400834BAB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC35BCB1AB00D3400834BAB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EBC35BDC1AB00D3400834BAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC35BDD1AB00D3400834BAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBC35BE11AB00D3400834BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EBC35BE21AB00D3400834BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EBC35BE41AB00D3400834BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Soap/Soap-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "Soap/Soap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EBC35BE51AB00D3400834BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Soap/Soap-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "Soap/Soap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EBC35BE71AB00D3400834BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Soap.app/Contents/MacOS/Soap";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Soap/Soap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SoapTests/SoapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EBC35BE81AB00D3400834BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Soap.app/Contents/MacOS/Soap";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Soap/Soap-Prefix.pch";
+				INFOPLIST_FILE = "SoapTests/SoapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBC35BAD1AB00D3300834BAB /* Build configuration list for PBXProject "Soap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC35BE11AB00D3400834BAB /* Debug */,
+				EBC35BE21AB00D3400834BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC35BE31AB00D3400834BAB /* Build configuration list for PBXNativeTarget "Soap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC35BE41AB00D3400834BAB /* Debug */,
+				EBC35BE51AB00D3400834BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC35BE61AB00D3400834BAB /* Build configuration list for PBXNativeTarget "SoapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC35BE71AB00D3400834BAB /* Debug */,
+				EBC35BE81AB00D3400834BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBC35BAA1AB00D3300834BAB /* Project object */;
+}
