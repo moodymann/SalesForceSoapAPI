@@ -8,6 +8,15 @@
 
 #import "WorkWindowController.h"
 
+
+@implementation MyNSTableView
+@synthesize  delegate;
+
+- (void)copy:(id)sender{
+    [self.delegate copyTableView];
+}
+@end
+
 @implementation WorkWindowController
 
 - (id)init
@@ -252,4 +261,65 @@
     }
 }
 
+#pragma --mark tableview delegate Ctr+C でコピー
+- (void)copyTableView
+{
+    NSIndexSet* indexSet = [_tableView selectedRowIndexes];
+	NSArray* columns = [_tableView tableColumns];
+	
+	NSUInteger selectedIndex;
+	NSMutableString* string = [[NSMutableString alloc] init];
+	NSPasteboard* pasteBoard = [NSPasteboard generalPasteboard];
+	int i;
+	BOOL result;
+    
+	if([indexSet indexGreaterThanOrEqualToIndex:0] == NSNotFound){
+		//Column Copy
+		indexSet = [_tableView selectedColumnIndexes];
+		for(i = 0; i < [_tableView numberOfRows]; i++){
+			selectedIndex=0;
+            SObject *obj = [tmpSObjects objectAtIndex:i];
+			while (true) {
+				selectedIndex = [indexSet indexGreaterThanOrEqualToIndex:selectedIndex];
+				if(selectedIndex == NSNotFound){
+					break;
+				}
+                [string appendString:[obj valueForKey:[[columns objectAtIndex:selectedIndex] identifier]]];
+
+				[string appendString:@"\t"];
+				selectedIndex++;
+			}
+			[string appendString:@"\n"];
+		}
+	}else{
+		//Row Copy
+		selectedIndex=0;
+		
+		while (true) {
+			selectedIndex=[indexSet indexGreaterThanOrEqualToIndex:selectedIndex];
+			if(selectedIndex == NSNotFound){
+				break;
+			}
+            SObject *obj = [tmpSObjects objectAtIndex:selectedIndex];
+			for(i = 0; i < [columns count]; i++){
+                if (class_getProperty([obj class], [[[columns objectAtIndex:i] identifier] UTF8String])) {
+                    [string appendString:[obj valueForKey:[[columns objectAtIndex:i] identifier]]];
+                }
+                
+				if(i != [tmpSObjects count] - 1){
+					[string appendString:@"\t"];
+				}
+			}
+			[string appendString:@"\n"];
+			selectedIndex++;
+		}
+	}
+	
+	[pasteBoard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:self];
+	result=[pasteBoard setString:string forType:NSStringPboardType];
+	if(result == NO){
+		[[NSAlert alertWithMessageText:@"コピー失敗" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"テキストのコピーに失敗しました。"] runModal];
+	}
+
+}
 @end

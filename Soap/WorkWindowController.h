@@ -9,11 +9,24 @@
 #import <Foundation/Foundation.h>
 #import "InquiryService.h"
 #import "SObject.h"
+@import ObjectiveC; //class_getProperty用
+
+@protocol  MyNSTableViewDelegate
+@optional
+- (void)copyTableView;
+@end
+
+@interface MyNSTableView : NSTableView
+- (void)copy:(id)sender;
+@property (nonatomic, assign)id<MyNSTableViewDelegate>     delegate;
+
+@end
 
 @interface WorkWindowController : NSObject
 <
 InquiryServiceDelegate,
 NSTableViewDataSource,
+MyNSTableViewDelegate,
 NSTableViewDelegate,
 NSTextFieldDelegate
 >
