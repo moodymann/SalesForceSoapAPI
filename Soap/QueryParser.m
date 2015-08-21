@@ -22,6 +22,7 @@
         self.queryResult = [[QueryResult alloc] init];
         self.queryResult.query = [[Query alloc] init];
         self.queryResult.query.result = [NSMutableArray array];
+        self.queryResult.query.sortOrder = [NSMutableArray array];
 	}
 	return self;
 }
@@ -56,6 +57,7 @@
 		[self.currentElementName appendString:cmp];
     }else if ([cmp isEqualToString:@"records"]) {
         dict = [[NSMutableDictionary alloc] init];
+        sort = [NSMutableArray array];
 		[self.currentElementName setString:@""];
 		[self.currentElementName appendString:cmp];
     }
@@ -77,6 +79,7 @@
     if ([cmp isEqualToString:@"records"]) {
 		[self.currentElementName setString:@""];
         [self.queryResult.query.result addObject:dict];
+        [self.queryResult.query.sortOrder addObject:sort];
     } else {
 		if (self.currentElement) {
             if ([self.currentElementName isEqualToString:@"records"]) {
@@ -84,6 +87,7 @@
                     ![cmp isEqualToString:@"Id"]) {
                     
                     [dict setObject:self.currentElement forKey:cmp];
+                    [sort addObject:cmp];
                 }
             }
             self.currentElement = nil;

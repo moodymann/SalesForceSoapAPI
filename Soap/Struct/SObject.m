@@ -27,6 +27,7 @@
 @synthesize defaultedoncreate;
 @synthesize sortable;
 @synthesize custom;
+@synthesize pickListvalues;
 
 /*******************************************************************************
  *  init

@@ -11,7 +11,9 @@
 @interface Query : NSObject
 {
     NSMutableArray *result;
+    NSMutableArray *sortOrder;
 }
 @property (nonatomic, retain)NSMutableArray *result;
+@property (nonatomic, retain)NSMutableArray *sortOrder;
 
 @end

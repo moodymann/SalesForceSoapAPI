@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0CA4751B3D3320004CD356 /* MBWebServiceInfoSandBox.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0CA4741B3D3320004CD356 /* MBWebServiceInfoSandBox.plist */; };
+		EB0CA4781B43842A004CD356 /* PickListValues.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0CA4771B43842A004CD356 /* PickListValues.m */; };
+		EB9360061B60C88A003D7786 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9360051B60C88A003D7786 /* Utility.m */; };
 		EBAA25481ACD2CF7009C63DA /* WorkWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */; };
 		EBAA254B1ACD2D33009C63DA /* WorkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */; };
 		EBC35BB61AB00D3300834BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC35BB51AB00D3300834BAB /* Cocoa.framework */; };
@@ -62,6 +65,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0CA4741B3D3320004CD356 /* MBWebServiceInfoSandBox.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MBWebServiceInfoSandBox.plist; sourceTree = "<group>"; };
+		EB0CA4761B43842A004CD356 /* PickListValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickListValues.h; path = Struct/PickListValues.h; sourceTree = "<group>"; };
+		EB0CA4771B43842A004CD356 /* PickListValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickListValues.m; path = Struct/PickListValues.m; sourceTree = "<group>"; };
+		EB9360041B60C88A003D7786 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		EB9360051B60C88A003D7786 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkWindow.xib; sourceTree = "<group>"; };
 		EBAA25491ACD2D33009C63DA /* WorkWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkWindowController.h; sourceTree = "<group>"; };
 		EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkWindowController.m; sourceTree = "<group>"; };
@@ -218,6 +226,8 @@
 				EBAA25471ACD2CF7009C63DA /* WorkWindow.xib */,
 				EBAA25491ACD2D33009C63DA /* WorkWindowController.h */,
 				EBAA254A1ACD2D33009C63DA /* WorkWindowController.m */,
+				EB9360041B60C88A003D7786 /* Utility.h */,
+				EB9360051B60C88A003D7786 /* Utility.m */,
 				EBC35BEE1AB00FAA00834BAB /* WebService */,
 				EBC35C151AB27F9B00834BAB /* Struct */,
 				EBC35BBC1AB00D3400834BAB /* Supporting Files */,
@@ -234,6 +244,7 @@
 				EBC35BC31AB00D3400834BAB /* Soap-Prefix.pch */,
 				EBC35BC41AB00D3400834BAB /* Credits.rtf */,
 				EBC35BF21AB179F000834BAB /* MBWebServiceInfo.plist */,
+				EB0CA4741B3D3320004CD356 /* MBWebServiceInfoSandBox.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,6 +374,8 @@
 				EBC35C291AB6BDF300834BAB /* SObjects.m */,
 				EBC9FCD91AD27A5C0081FE42 /* Query.h */,
 				EBC9FCDA1AD27A5C0081FE42 /* Query.m */,
+				EB0CA4761B43842A004CD356 /* PickListValues.h */,
+				EB0CA4771B43842A004CD356 /* PickListValues.m */,
 			);
 			name = Struct;
 			sourceTree = "<group>";
@@ -452,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0CA4751B3D3320004CD356 /* MBWebServiceInfoSandBox.plist in Resources */,
 				EBC35BC01AB00D3400834BAB /* InfoPlist.strings in Resources */,
 				EBC35BCE1AB00D3400834BAB /* Images.xcassets in Resources */,
 				EBAA25481ACD2CF7009C63DA /* WorkWindow.xib in Resources */,
@@ -483,6 +497,7 @@
 				EBC35C211AB6B18100834BAB /* DescribeSObjectParameter.m in Sources */,
 				EBC35BF11AB00FE100834BAB /* WebServiceStubs.m in Sources */,
 				EBC9FCD81AD24B120081FE42 /* QueryParameter.m in Sources */,
+				EB0CA4781B43842A004CD356 /* PickListValues.m in Sources */,
 				EBC9FCE51ADB5D9C0081FE42 /* DescribeGlobalStub.m in Sources */,
 				EBC35C241AB6B98700834BAB /* DescribeSObjectLibxmlParser.m in Sources */,
 				EBC35C301AB6C64C00834BAB /* DescribeSObjectsServiceStub.m in Sources */,
@@ -499,6 +514,7 @@
 				EBC35C011AB27AB000834BAB /* LoginParameter.m in Sources */,
 				EBC35BC21AB00D3400834BAB /* main.m in Sources */,
 				EBC35BFA1AB279FB00834BAB /* LoginServiceStub.m in Sources */,
+				EB9360061B60C88A003D7786 /* Utility.m in Sources */,
 				EBC35C1E1AB2886500834BAB /* InquiryService.m in Sources */,
 				EBC9FCCF1AD24A940081FE42 /* QueryServiceStub.m in Sources */,
 				EBC9FCDE1ADB59ED0081FE42 /* DescribeGlobalParameter.m in Sources */,

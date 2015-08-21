@@ -11,6 +11,7 @@
 #import "WebServiceLibxmlParser.h"
 #import "DescribeSObjectsSearchResult.h"
 #import "SObject.h"
+#import "PickListValues.h"
 
 @interface DescribeSObjectLibxmlParser : WebServiceLibxmlParser
 {
@@ -18,6 +19,7 @@
 
     NSMutableArray *sObjects;
     SObject *sObject;
+    PickListValues *pickListValues;
 }
 
 @property (nonatomic, retain)DescribeSObjectsSearchResult     *describesObjectsSearchResult;

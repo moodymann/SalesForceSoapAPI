@@ -63,7 +63,19 @@
 		[self.currentElementName appendString:cmp];
         sObject = [[SObject alloc] init];
         [sObjects addObject:sObject];
+    }else if([cmp isEqualToString:@"picklistValues"]){
+		[self.currentElementName setString:@""];
+		[self.currentElementName appendString:cmp];
+        if (pickListValues) {
+            pickListValues = nil;
+        }
+        if (!sObject.pickListvalues) {
+            sObject.pickListvalues = [NSMutableArray array];
+        }
+        pickListValues = [[PickListValues alloc] init];
+        [sObject.pickListvalues addObject:pickListValues];
     }
+    
 	if ([self.currentElementName isEqualToString:@"limit"]) {
         if (class_getProperty([self.describesObjectsSearchResult class], (char *)localname)) {
             self.currentElement = [[NSMutableString alloc] initWithString:@""];
@@ -78,6 +90,13 @@
 				self.currentElement = [[NSMutableString alloc] initWithString:@""];
 			}
         }
+    }else if ([self.currentElementName isEqualToString:@"picklistValues"]){
+        if (pickListValues) {
+            if (class_getProperty([pickListValues class], (char *)localname)) {
+				self.currentElement = [[NSMutableString alloc] initWithString:@""];
+			}
+        }
+        
     }
 }
 
@@ -92,10 +111,14 @@
     if ([cmp isEqualToString:@"fields"]) {
 		[self.currentElementName setString:@""];
         [self.describesObjectsSearchResult.sObjects addObject:sObject];
-    } else {
+    }else if ([cmp isEqualToString:@"picklistValues"]){
+        [self.currentElementName setString:@"fields"];
+    }else {
 		if (self.currentElement) {
             if ([self.currentElementName isEqualToString:@"fields"]) {
                 [sObject setValue:self.currentElement forKey:cmp];
+            }else if ([self.currentElementName isEqualToString:@"picklistValues"]){
+                [pickListValues setValue:self.currentElement forKey:cmp];
             }
             self.currentElement = nil;
         }

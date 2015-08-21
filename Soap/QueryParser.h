@@ -14,6 +14,7 @@
 @interface QueryParser : WebServiceLibxmlParser
 {
     NSMutableDictionary *dict;
+    NSMutableArray *sort;
     QueryResult *queryResult;
 }
 

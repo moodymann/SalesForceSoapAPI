@@ -15,7 +15,7 @@ static NSDictionary *webServiceInfo;
 + (void)initWith {
 	
 	if (!webServiceInfo) {
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"MBWebServiceInfo" ofType:@"plist"];
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"MBWebServiceInfoSandBox" ofType:@"plist"];
 		webServiceInfo = [NSDictionary dictionaryWithContentsOfFile:path];
 	}
 }

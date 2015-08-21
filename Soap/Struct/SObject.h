@@ -29,5 +29,6 @@
 @property(nonatomic, retain) NSString *defaultedoncreate;
 @property(nonatomic, retain) NSString *sortable;
 @property(nonatomic, retain) NSString *custom;
+@property(nonatomic, retain) NSMutableArray *pickListvalues;
 
 @end

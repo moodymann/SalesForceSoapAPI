@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "InquiryService.h"
 #import "SObject.h"
+#import "PickListValues.h"
+#import "Utility.h"
 @import ObjectiveC; //class_getProperty用
 
 @protocol  MyNSTableViewDelegate
@@ -32,6 +34,7 @@ NSTextFieldDelegate
 >
 {
     NSMutableArray *tmpSObjects;
+    NSMutableArray *filterObjects;
 }
 @property (strong) IBOutlet NSWindow *myWindow;
 @property (weak) IBOutlet NSButton *sObjectButton;
@@ -42,6 +45,9 @@ NSTextFieldDelegate
 @property (weak) IBOutlet NSTableView *resultTableView;
 @property (weak) IBOutlet NSTableView *objectsTableView;
 @property (weak) IBOutlet NSButton *checkCustom;
+@property (weak) IBOutlet NSTextField *sortText;
+@property (weak) IBOutlet NSButton *sortButton;
+
 
 - (void)showWindow;
 

@@ -1,17 +1,15 @@
 //
-//  Query.m
+//  PickListValues.m
 //  Soap
 //
-//  Created by isid on 2015/04/06.
+//  Created by isid on 2015/07/01.
 //  Copyright (c) 2015年 isid. All rights reserved.
 //
 
-#import "Query.h"
+#import "PickListValues.h"
 
-@implementation Query
-
-@synthesize result;
-@synthesize sortOrder;
+@implementation PickListValues
+@synthesize value;
 
 /*******************************************************************************
  *  init

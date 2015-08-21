@@ -71,16 +71,26 @@
 
 
 - (IBAction)pushSObject:(id)sender {
-    if ([[InquiryService sharedInstance] isLogined]) {
-        [[InquiryService sharedInstance] searchSObject:_sObjectNameText.stringValue];
-        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-        [notificationCenter addObserver:self
-                               selector:@selector(searchEnd)
-                                   name:@"searchEnd"
-                                 object:nil];
+    // select文生成に変更
+//    if ([[InquiryService sharedInstance] isLogined]) {
+//        [[InquiryService sharedInstance] searchSObject:_sObjectNameText.stringValue];
+//        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+//        [notificationCenter addObserver:self
+//                               selector:@selector(searchEnd)
+//                                   name:@"searchEnd"
+//                                 object:nil];
+//
+//    }else{
+//        NSLog(@"failed");
+//    }
+    if (tmpSObjects) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (SObject *obj in tmpSObjects) {
+            [array addObject:obj.name];
+        }
+        NSString *str = [array componentsJoinedByString:@", "];
 
-    }else{
-        NSLog(@"failed");
+        _textView.string = [NSString stringWithFormat:@"SELECT %@ FROM %@", str, _sObjectNameText.stringValue];
     }
 }
 
@@ -109,7 +119,7 @@
 }
 
 - (IBAction)execQueryButton:(id)sender {
-    [[InquiryService sharedInstance] execQuery:_textView.string];
+    [[InquiryService sharedInstance] execQuery:[Utility stringSafeForXML:_textView.string]];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self
                            selector:@selector(queryEnd)
@@ -134,13 +144,17 @@
     while([[_resultTableView tableColumns] count] > 0) {
         [_resultTableView removeTableColumn:[[_resultTableView tableColumns] lastObject]];
     }
-    if ([InquiryService sharedInstance].query) {
+    if ([InquiryService sharedInstance].query && [[InquiryService sharedInstance].query.result count] > 0) {
         NSArray *keys = [[InquiryService sharedInstance].query.result[0] allKeys];
-        for (NSString *key in keys) {
-            NSTableColumn *col = [[NSTableColumn alloc] initWithIdentifier:key];
-            NSTableHeaderCell *headercell = [[NSTableHeaderCell alloc]initTextCell:key];
-            [col setHeaderCell:headercell];
-            [_resultTableView addTableColumn:col];
+        for (NSString *str in [InquiryService sharedInstance].query.sortOrder[0]) {
+            for (NSString *key in keys) {
+                if ([str isEqualToString:key]) {
+                    NSTableColumn *col = [[NSTableColumn alloc] initWithIdentifier:key];
+                    NSTableHeaderCell *headercell = [[NSTableHeaderCell alloc]initTextCell:key];
+                    [col setHeaderCell:headercell];
+                    [_resultTableView addTableColumn:col];
+                }
+            }
         }
     }
 
@@ -155,10 +169,34 @@
         [_resultTableView reloadData];
     }
 }
-- (IBAction)deletebutton:(id)sender {
-    while([[_resultTableView tableColumns] count] > 0) {
-        [_resultTableView removeTableColumn:[[_resultTableView tableColumns] lastObject]];
+
+- (IBAction)filetrObject:(id)sender {
+    if ([InquiryService sharedInstance].objectList) {
+        filterObjects = nil;
+        filterObjects = [NSMutableArray array];
+        if ([_sortText.stringValue length] > 0) {
+            for (SObject *obj in [InquiryService sharedInstance].objectList) {
+                // 文字列検索　大文字小文字を区別しないため、一旦小文字に変換する
+                NSString *str = [obj.name lowercaseString];
+                NSRange range = [str rangeOfString:[_sortText.stringValue lowercaseString]];
+                if (range.location != NSNotFound) {
+                    [filterObjects addObject:obj];
+                }
+            }
+        }else{
+            for (SObject *obj in [InquiryService sharedInstance].objectList) {
+                [filterObjects addObject:obj];
+            }
+        }
+        [_objectsTableView reloadData];
     }
+}
+
+- (IBAction)deletebutton:(id)sender {
+    _textView.string = @"";
+//    while([[_resultTableView tableColumns] count] > 0) {
+//        [_resultTableView removeTableColumn:[[_resultTableView tableColumns] lastObject]];
+//    }
     
 }
 - (IBAction)checkCustomButton:(id)sender {
@@ -183,6 +221,11 @@
                                                     name:@"searchAllObjectsEnd"
                                                   object:nil];
     if ([InquiryService sharedInstance].objectList) {
+        filterObjects = nil;
+        filterObjects = [NSMutableArray array];
+        for (SObject *obj in [InquiryService sharedInstance].objectList) {
+            [filterObjects addObject:obj];
+        }
         [_objectsTableView reloadData];
     }
 }
@@ -200,8 +243,11 @@
             cnt = [InquiryService sharedInstance].query.result.count;
         }
     }else if (tableView == _objectsTableView){
-        if ([InquiryService sharedInstance].objectList) {
-            cnt = [InquiryService sharedInstance].objectList.count;
+//        if ([InquiryService sharedInstance].objectList) {
+//            cnt = [InquiryService sharedInstance].objectList.count;
+//        }
+        if (filterObjects) {
+            cnt = filterObjects.count;
         }
     }
     return cnt;
@@ -224,6 +270,12 @@
             rtn = tmp.length;
         }else if ([[tableColumn identifier] isEqualToString:@"custom"]){
             rtn = tmp.custom;
+        }else if ([[tableColumn identifier] isEqualToString:@"picklist"]){
+            NSMutableArray *array = [NSMutableArray array];
+            for (PickListValues *pick in tmp.pickListvalues) {
+                [array addObject:pick.value];
+            }
+            rtn = [array componentsJoinedByString:@","];
         }
     }else if (tableView == _resultTableView){
         if ([InquiryService sharedInstance].query) {
@@ -236,9 +288,15 @@
             }
         }
     }else if (tableView == _objectsTableView){
-        if ([InquiryService sharedInstance].objectList) {
+//        if ([InquiryService sharedInstance].objectList) {
+//            if ([[tableColumn identifier] isEqualToString:@"object"]) {
+//                SObject *obj = [InquiryService sharedInstance].objectList[row];
+//                rtn = obj.name;
+//            }
+//        }
+        if (filterObjects.count > 0) {
             if ([[tableColumn identifier] isEqualToString:@"object"]) {
-                SObject *obj = [InquiryService sharedInstance].objectList[row];
+                SObject *obj = filterObjects[row];
                 rtn = obj.name;
             }
         }
@@ -250,7 +308,7 @@
 {
     NSTableView *table = aNotification.object;
     if (table == _objectsTableView && table.selectedRow >= 0 ) {
-        SObject *obj = [InquiryService sharedInstance].objectList[table.selectedRow];
+        SObject *obj = filterObjects[table.selectedRow];
         _sObjectNameText.stringValue = obj.name;
         [[InquiryService sharedInstance] searchSObject:obj.name];
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -261,7 +319,7 @@
     }
 }
 
-#pragma --mark tableview delegate Ctr+C でコピー
+#pragma --mark tableview delegate Cmd+C でコピー
 - (void)copyTableView
 {
     NSIndexSet* indexSet = [_tableView selectedRowIndexes];
@@ -304,6 +362,9 @@
 			for(i = 0; i < [columns count]; i++){
                 if (class_getProperty([obj class], [[[columns objectAtIndex:i] identifier] UTF8String])) {
                     [string appendString:[obj valueForKey:[[columns objectAtIndex:i] identifier]]];
+                }else if ([[[columns objectAtIndex:i] identifier] isEqualToString:@"dataType"]){
+					[string appendString:@"\t"];
+                    [string appendString:obj.type];
                 }
                 
 				if(i != [tmpSObjects count] - 1){
